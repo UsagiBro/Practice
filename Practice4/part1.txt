@@ -1,0 +1,5 @@
+<Жемчужина>? Я слыхал о ней.
+Команда грабит суда и порт уже десять лет.
+The JavaR programming language is
+a general-purpose, concurrent, class-based,
+object-oriented language.

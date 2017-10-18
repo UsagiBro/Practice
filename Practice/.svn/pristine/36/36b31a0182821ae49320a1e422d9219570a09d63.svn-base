@@ -1,0 +1,54 @@
+package ua.nure.zhazhkyi.Practice2;
+
+import java.util.Arrays;
+import java.util.Iterator;
+
+/**
+ * Created by Igor Zhazhky on 08.07.2017.
+ */
+public class Demo {
+    public static void main(String[] args) {
+        MyList con = new MyListImpl();
+        System.out.println("~~~Part1");
+//        con.add("A");
+//        con.add("A");
+//        con.add("B");
+//        con.add(433);
+//        con.add(888);
+////        con.add(new Object());
+//        con.add(null);
+        con.remove("A");
+        System.out.println(con.toString());
+        System.out.println("Container size:" + con.size());
+        //Start of the containsAll() check
+        MyList conToCheck = new MyListImpl();
+        conToCheck.add("A");
+        conToCheck.add("B");
+        System.out.println(con.containsAll(conToCheck));
+
+        System.out.println("~~~Part2");
+        for (Object o : con) {
+            System.out.println(o);
+        }
+        Iterator<Object> it = con.iterator();
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
+
+
+        System.out.println("~~~Part3");
+        MyListImpl con2 = new MyListImpl();
+        con2.add("A");
+        con2.add("B");
+        con2.add(433);
+        con2.add(888);
+        con2.add(new Object());
+        con2.add(null);
+        ListIterator lit = con2.listIterator();
+        while(lit.hasPrevious()){
+            System.out.println(lit.previous());
+        }
+        lit.set("END");
+        System.out.println(con2.toString());
+    }
+}

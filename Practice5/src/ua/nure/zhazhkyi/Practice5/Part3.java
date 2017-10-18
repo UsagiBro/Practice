@@ -1,0 +1,37 @@
+package ua.nure.zhazhkyi.Practice5;
+
+public class Part3 {
+    private int count1 = 0;
+    private int count2 = 0;
+    final static Part3 part3 = new Part3();
+
+    void unsyncCheck() {
+        try {
+            count1 += 1;
+            Thread.sleep(10);
+            count2 += 1;
+            System.out.println(count1 == count2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    synchronized void syncCheck() {
+        unsyncCheck();
+    }
+
+    public static void main(String[] args) {
+        Part3 part3 = new Part3();
+        new Part3Thread().start();
+        new Part3Thread().start();
+    }
+
+    static class Part3Thread extends Thread {
+
+        @Override
+        public void run() {
+//            part3.unsyncCheck();
+            part3.syncCheck();
+        }
+    }
+}

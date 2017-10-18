@@ -1,0 +1,32 @@
+package ua.nure.zhazhkyi.Practice3;
+
+import com.sun.deploy.util.StringUtils;
+
+import java.security.*;
+import java.util.Arrays;
+
+public class Part4 {
+
+    public static String hash(String input, String algorithm) throws NoSuchAlgorithmException {
+        MessageDigest digest = MessageDigest.getInstance(algorithm);
+        digest.update(input.getBytes());
+        byte[] hash = digest.digest();
+        String[] binaries = new String[hash.length];
+        String s = null;
+        for (int i = 0; i < hash.length; i++) {
+            if (hash[i] > 0) {
+                s = String.format("00000000%s", Integer.toBinaryString(hash[i])).replace(' ', '0');
+            } else {
+                s = Integer.toBinaryString(hash[i]);
+            }
+            s = s.substring(s.length() - 8);
+            s = Integer.toHexString(Integer.valueOf(s, 2));
+            if (s.length() == 1) {
+                s = "0" + s;
+            }
+            binaries[i] = s.toUpperCase();
+        }
+        return StringUtils.join(Arrays.asList(binaries),"");
+    }
+
+}

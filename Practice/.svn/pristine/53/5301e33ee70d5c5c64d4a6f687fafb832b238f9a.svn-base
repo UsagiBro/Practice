@@ -1,0 +1,92 @@
+package ua.nure.zhazhkyi.Practice3;
+
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
+
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * Created by Igor Zhazhky on 18.07.2017.
+ */
+public class Part1 {
+    private static final String REGEXP = "(?ium)^(.+);(.+);(.+@.+\\.\\w{2,4})$";
+    private static Pattern pattern = Pattern.compile(REGEXP, Pattern.UNICODE_CHARACTER_CLASS);
+    private static Matcher matcher;
+    private static String result;
+
+    public static String convert1(String input) {
+        StringBuilder builder = new StringBuilder();
+        matcher = pattern.matcher(input);
+        while (matcher.find()) {
+            builder.append(matcher.group(1)).append("" +
+                    " ==> ").append(matcher.group(3)).append(System.lineSeparator());
+        }
+        result = builder.toString();
+        return result;
+    }
+
+    public static String convert2(String input) {
+        StringBuilder builder = new StringBuilder();
+        matcher = pattern.matcher(input);
+        while (matcher.find()) {
+            builder.append(matcher.group(2)).append("" +
+                    " (email: ").append(matcher.group(3)).append(")").append(System.lineSeparator());
+
+        }
+        result = builder.toString();
+        return result;
+    }
+
+    public static String convert3(String input) {
+        StringBuilder builder = new StringBuilder();
+        Set<String> mails = new LinkedHashSet<>();
+        String emailRegexp = "(?ium)(?<=@).+\\.\\w{2,4}";
+        Pattern emailPattern = Pattern.compile(emailRegexp, Pattern.UNICODE_CHARACTER_CLASS);
+        Matcher emailMatcher = emailPattern.matcher(input);
+        matcher = pattern.matcher(input);
+        while (emailMatcher.find()) {
+            mails.add(emailMatcher.group());
+        }
+        for (String mail : mails) {
+            builder.append(mail).append(" ==> ");
+            while (matcher.find()) {
+                if (matcher.group().contains(mail)) {
+                    builder.append(matcher.group(1)).append(", ");
+                }
+            }
+            builder.setLength(builder.length() - 2);
+            builder.append(System.lineSeparator());
+            matcher.reset();
+        }
+        result = builder.toString();
+        return result;
+    }
+
+    public static String convert4(String input) {
+        StringBuilder builder = new StringBuilder();
+        String headerRegexp = "(?ium)(.+);(.+);(.+);";
+        Pattern headerPattern = Pattern.compile(headerRegexp);
+        Matcher headerMatcher = headerPattern.matcher(input);
+        matcher = pattern.matcher(input);
+        while (headerMatcher.find()) {
+            builder.append(headerMatcher.group(0)).append("Password").append(System.lineSeparator());
+        }
+        while (matcher.find()) {
+            builder.append(matcher.group(1)).append(";" +
+                    "").append(matcher.group(2)).append(";" +
+                    "").append(matcher.group(3)).append(";" +
+                    "").append(getRandomPassword()).append(System.lineSeparator());
+        }
+        builder.delete(builder.lastIndexOf("\n"), builder.length());
+        result = builder.toString();
+        return result;
+    }
+
+    public static String getRandomPassword() {
+        Random random = new Random();
+        int min = 1000;
+        int max = 9999;
+        return String.valueOf(random.nextInt((max - min) + 1) + min);
+    }
+}

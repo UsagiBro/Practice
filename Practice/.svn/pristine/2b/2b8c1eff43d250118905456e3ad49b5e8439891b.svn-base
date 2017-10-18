@@ -1,0 +1,22 @@
+package ua.nure.zhazhkyi.Practice3;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Part3 {
+    private static final String REGEXP = "(?ium)((\\w+)('\\w+\\W+)|(\\w+\\W*))";
+    private static Pattern pattern = Pattern.compile(REGEXP, Pattern.UNICODE_CHARACTER_CLASS);
+    private static Matcher matcher;
+    private static String result;
+    public static String convert(String input) {
+        StringBuilder builder = new StringBuilder();
+        matcher = pattern.matcher(input);
+        while(matcher.find()){
+
+            builder.append(matcher.group(1).substring(0, 1).toUpperCase()).
+                    append(matcher.group(1).substring(1));
+        }
+        result = builder.toString();
+        return result;
+    }
+}

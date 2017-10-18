@@ -1,0 +1,169 @@
+package ua.nure.zhazhkyi.Practice2;
+
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+/**
+ * Created by Igor Zhazhky on 08.07.2017.
+ */
+class MyListImpl implements MyList, ListIterable {
+
+    private int size = 0;
+    private Object[] array = new Object[10];
+
+    public void add(Object e) {
+        if ((size + 1) > array.length) {
+
+            array = Arrays.copyOf(array, size + 10);
+        }
+        array[size++] = e;
+    }
+
+    public void clear() {
+        for (int i = 0; i < size; i++) {
+            array[i] = null;
+        }
+        size = 0;
+    }
+
+    public boolean remove(Object o) {
+        if (o == null) {
+            for (int i = 0; i < size; i++) {
+                if (array[i] == null) {
+                    int newCap = size - i - 1;
+                    System.arraycopy(array, i + 1, array, i, newCap);
+                    size--;
+                    return true;
+                }
+            }
+        } else {
+            for (int i = 0; i < size; i++) {
+                if (o.equals(array[i])) {
+                    int newCap = size - i - 1;
+                    System.arraycopy(array, i + 1, array, i, newCap);
+                    size--;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public Object[] toArray() {
+        return array;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public boolean contains(Object o) {
+        if (o == null) {
+            for (int i = 0; i < size; i++) {
+                if (array[i] == null) {
+                    return true;
+                }
+            }
+        } else {
+            for (int i = 0; i < size; i++) {
+                if (o.equals(array[i])) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean containsAll(MyList c) {
+        if (c == null || c.size() > this.size()) {
+            return false;
+        }
+        for (Object o : c) {
+            if (!contains(o)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String toString() {
+        StringBuilder builder = new StringBuilder("{");
+        for (int i = 0; i < size - 1; i++) {
+            builder.append(String.format("[%s],", String.valueOf(array[i])));
+        }
+        if (size > 0) {
+            builder.append(String.format("[%s]", String.valueOf(array[size - 1])));
+        }
+        builder.append("}");
+        return builder.toString();
+    }
+
+    //Part2
+    @Override
+    public Iterator<Object> iterator() {
+        return new IteratorImpl();
+    }
+
+    private class IteratorImpl implements Iterator<Object> {
+
+        private int cursor = -1;
+        private boolean allow = false;
+
+        public boolean hasNext() {
+            return cursor < (size - 1);
+        }
+
+        public Object next() {
+            if (cursor >= size) {
+                throw new NoSuchElementException();
+            }
+            cursor++;
+            allow = true;
+            return MyListImpl.this.array[cursor];
+        }
+
+        public void remove() {
+            if (!allow) {
+                throw new IllegalStateException();
+            }
+            System.arraycopy(array, cursor + 1, array, cursor, size - 1);
+            allow = false;
+        }
+    }
+
+    //Part3
+    @Override
+    public ListIterator listIterator() {
+        return new ListIteratorImpl();
+    }
+
+    private class ListIteratorImpl extends IteratorImpl implements ListIterator {
+        private int cursor = size;
+        private boolean allow = false;
+
+        @Override
+        public boolean hasPrevious() {
+            return cursor > 0;
+        }
+
+        @Override
+        public Object previous() {
+            if (cursor < 0) {
+                throw new NoSuchElementException();
+            }
+            cursor--;
+            allow = true;
+            return MyListImpl.this.array[cursor];
+        }
+
+        @Override
+        public void set(Object e) {
+            if (!allow) {
+                throw new IllegalStateException();
+            }
+            array[cursor] = e;
+            allow = false;
+        }
+    }
+}

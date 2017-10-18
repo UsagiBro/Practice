@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html class="splitter-invoked"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Module 09 - Java Training K 2015 Autumn - Java Training</title>
+
+        
+
+                        
+    
+                        
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use AJS.Confluence.getContextPath() -->
+<meta id="confluence-context-path" name="confluence-context-path" content="/conf2">
+<meta id="confluence-base-url" name="confluence-base-url" content="http://jtrain.ddns.net:9001/conf2">
+
+<meta id="atlassian-token" name="atlassian-token" content="ee5a10bbd547ac059da378b3efaa10ab6bc18138">
+
+<meta id="confluence-space-key" name="confluence-space-key" content="JTK">
+<script type="text/javascript">
+    // Deprecated global variables. To be removed in a future version of Confluence.
+    var contextPath = '/conf2';
+</script>
+
+    
+
+<!-- include system css resources -->
+
+
+    <link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/batch_002.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/381/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<!--[if IE 9]>
+<link type="text/css" rel="stylesheet" href="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/381/_/download/superbatch/css/batch.css?conditionalComment=IE+9" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/381/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/batch.css" media="print">
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/batch_004.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/10aa75430b48f197ccea5422bf34efc8/_/download/contextbatch/css/viewcontent,main/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/batch_003.css" media="all">
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/confluence_002.css" media="all">
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/confluence.css" media="print">
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/com.css" media="all">
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/default-theme.css" media="all">
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/splitter.css" media="all">
+<link type="text/css" rel="stylesheet" href="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/custom.css" media="all">
+
+<!-- end system css resources -->
+
+    <meta name="confluence-request-time" content="1461420453997">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use atl.header -->
+        
+            <script type="text/x-template" title="share-content-popup">
+    <form action="#" method="post" class="aui share-content-popup">
+        <fieldset>
+            <label for="users">User name or email</label>
+            <div class="autocomplete-user-target">
+                <input class="text autocomplete-sharepage" id="users" data-max="10" data-dropdown-target=".autocomplete-user-target" data-none-message="No matching user or email found"/>
+            </div>
+            <ol class="recipients">
+            </ol>
+            <div><label for="note">Note</label></div>
+            <textarea class="textarea" id="note" placeholder="Add an optional note"/>
+        </fieldset>
+        <div class="button-panel">
+            <div class="progress-messages-icon"></div>
+            <div class="progress-messages">
+            </div>
+            <input class="button submit" type="submit" value="Share" disabled/>
+            <a class="close-dialog" href="#">Cancel</a>
+        </div>
+    </form>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-username">
+    <li data-username="{username}" style="display: none">
+        <span>
+            <img src="{thumbnailLink.href}" title="{title}">
+            <span>{title}</span>
+            <span class="remove-recipient"/>
+        </span>
+    </li>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-email">
+    <li data-email="{email}" style="display: none">
+        <span>
+            <img src="{icon}" title="{email}">
+            <span>{email}</span>
+            <span class="remove-recipient"/>
+        </span>
+    </li>
+</script>
+    
+        
+            <meta name="ajs-keyboardshortcut-hash" content="1509f31b3ca389b0ebfffcaf7eb08138">
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            
+    
+            
+    
+    
+            <meta name="ajs-page-id" content="61603872">
+            <meta name="ajs-page-title" content="Module 09">
+            <meta name="ajs-parent-page-title" content="Classes">
+            <meta name="ajs-parent-page-id" content="61603844">
+            <meta name="ajs-space-key" content="JTK">
+            <meta name="ajs-space-name" content="Java Training K 2015 Autumn">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-context-path" content="/conf2">
+            <meta name="ajs-base-url" content="http://jtrain.ddns.net:9001/conf2">
+            <meta name="ajs-version-number" content="4.3.1">
+            <meta name="ajs-build-number" content="3390">
+            <meta name="ajs-remote-user" content="engsyst">
+            <meta name="ajs-static-resource-url-prefix" content="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="10485760">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="">
+            <meta name="ajs-atl-token" content="ee5a10bbd547ac059da378b3efaa10ab6bc18138">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-editor.loader.resources" content="&lt;!--[if lt IE 9]&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/44f46fb1fbbac1140164e3e1b503281e/_/download/contextbatch/css/editor,macro-browser,-viewcontent/batch.css?conditionalComment=lt+IE+9&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/44f46fb1fbbac1140164e3e1b503281e/_/download/contextbatch/css/editor,macro-browser,-viewcontent/batch.css&quot; media=&quot;all&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/44f46fb1fbbac1140164e3e1b503281e/_/download/contextbatch/js/editor,macro-browser,-viewcontent/batch.js&quot; &gt;&lt;/script&gt;
+">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="http://jtrain.ddns.net:9001/conf2/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="http://jtrain.ddns.net:9001/conf2/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="http://jtrain.ddns.net:9001/conf2/opensearch/osd.action" title="Java Training">
+
+        <!-- include system javascript resources -->
+                        
+    
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/381/_/download/superbatch/js/batch.js?conditionalComment=lt+IE+9" ></script>
+<![endif]-->
+<script type="text/javascript" src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/batch_004.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/381/_/download/superbatch/js/batch.js?conditionalComment=lte+IE+8" ></script>
+<![endif]-->
+<script type="text/javascript" src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/batch_005.js"></script>
+<script type="text/javascript" src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/batch_003.js"></script>
+<script type="text/javascript" src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/batch_002.js"></script>
+<script type="text/javascript" src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/batch.js"></script>
+<script type="text/javascript" src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/com.js"></script>
+
+    
+    <!-- end system javascript resources -->
+    
+
+    
+    <link rel="canonical" href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+09">
+    <link rel="shortlink" href="http://jtrain.ddns.net:9001/conf2/x/IACsAw">
+    <meta name="wikilink" content="[JTK:Module 09]">
+    <meta name="page-version" content="1">
+
+</head>
+
+<body onload="placeFocus()" id="com-atlassian-confluence" class="theme-documentation  splitter-invoked">
+
+        
+    <div id="full-height-container">
+    <div id="header-precursor">
+        
+                </div>
+
+<div id="header" class="sectionbottom ">
+        <form id="quick-search" class="quick-search" method="get" action="/conf2/dosearchsite.action">
+                <fieldset>
+            <input name="spaceSearch" value="false" type="hidden">
+        </fieldset>
+        <fieldset>
+            <legend>Quick Search</legend>
+            <input value="Search Confluence" title=" ( Type '/' )" class="quick-search-query placeholded" id="quick-search-query" accesskey="search-pages-action.accesskey" autocomplete="off" name="queryString" size="25" type="text">
+            <input class="quick-search-submit" id="quick-search-submit" value="Search Confluence" type="submit">
+            <div class="aui-dd-parent quick-nav-drop-down"><!-- Quick nav appears here --></div>
+        </fieldset>
+        <fieldset class="hidden parameters">
+            <input id="quickNavEnabled" value="true" type="hidden">
+                    </fieldset>
+    </form>
+
+    <ul id="header-menu-bar" class="ajs-menu-bar">
+                    
+            
+                
+                                                                
+            <li class="normal ajs-menu-item">
+        <a id="user-menu-link" class="user trigger ajs-menu-title" href="#"><span><span>Yury Mischerjakov</span></span></a>         <div style="" class="ajs-drop-down assistive" hidden="">
+                        <ul id="user-menu-link-user-preferences" class="section-user-preferences first">
+                                        <li>
+        
+        
+    
+    <a id="view-user-history-link" href="http://jtrain.ddns.net:9001/conf2/users/viewuserhistory.action" class="user-item user-history popup-link" title="">
+                   <span>Recently Viewed</span></a>        </li>
+                            </ul>
+                        <ul id="user-menu-link-user-operations" class="section-user-operations">
+                                        <li>
+    
+        
+    
+    <a id="logout-link" href="http://jtrain.ddns.net:9001/conf2/logout.action" class="user-item logout-link" title="">
+                   <span>Log Out</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+                        <li class="normal ajs-menu-item">
+            <div id="splitter-button" class="" title="Show or hide sidebar ( Type '[' )"></div>
+        </li>
+
+    </ul>
+    
+    
+    <ol id="breadcrumbs">
+                    
+                        
+        <li class="first">
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/dashboard.action" title="Go to Dashboard ( Type 'g' then 'd' )">Dashboard</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/display/JTK">Java Training K 2015 Autumn</a></span>
+                </li>
+                                        <li id="ellipsis" title="Show all breadcrumbs"><span><strong>…</strong></span></li>
+                                    
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Java+Training+K+2015+Autumn+Home">Java Training K 2015 Autumn Home</a></span>
+                </li>
+                                
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Classes">Classes</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+09">Module 09</a></span>
+                </li>
+        </ol>
+
+</div>
+
+    <div style="position: relative; height: 596.533px;" id="splitter">
+    <div style="position: absolute; left: 0px; width: 221px; height: 597px;" id="splitter-sidebar">
+        
+
+                    
+        
+    
+
+<div class="plugin_pagetree">
+
+                <div id="pagetreesearch">
+            <form method="POST" action="/conf2/plugins/pagetreesearch/pagetreesearch.action" name="pagetreesearchform">
+                                    <input name="ancestorId" value="61603843" type="hidden">
+                                <input name="spaceKey" value="JTK" type="hidden">
+                <input size="20" name="queryString" type="text">
+                <input value="Search" type="submit">
+            </form>
+        </div>
+    
+        
+    <ul class="plugin_pagetree_children_list plugin_pagetree_children_list_noleftspace">
+        <div id="children61603843-0" class="plugin_pagetree_children">
+<ul class="plugin_pagetree_children_list" id="child_ul61603843-0">
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus61603844-0" class="plugin_pagetree_childtoggle icon icon-minus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603844-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Classes">Classes</a>
+        </span>            </div>
+
+        <div id="children61603844-0" class="plugin_pagetree_children_container">
+                                                        <ul class="plugin_pagetree_children_list" id="child_ul61603844-0">
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus61603845-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603845-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+01">Module 01</a>
+        </span>            </div>
+
+        <div id="children61603845-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus61603848-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603848-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+02">Module 02</a>
+        </span>            </div>
+
+        <div id="children61603848-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus61603853-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603853-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+03">Module 03</a>
+        </span>            </div>
+
+        <div id="children61603853-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603855-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+04">Module 04</a>
+        </span>            </div>
+
+        <div id="children61603855-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus61603856-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603856-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+05">Module 05</a>
+        </span>            </div>
+
+        <div id="children61603856-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603860-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+06">Module 06</a>
+        </span>            </div>
+
+        <div id="children61603860-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus61603861-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603861-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+07">Module 07</a>
+        </span>            </div>
+
+        <div id="children61603861-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603868-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+08">Module 08</a>
+        </span>            </div>
+
+        <div id="children61603868-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus61603872-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span style="font-weight: bold;" class="plugin_pagetree_children_span" id="childrenspan61603872-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+09">Module 09</a>
+        </span>            </div>
+
+        <div id="children61603872-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603876-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+10">Module 10</a>
+        </span>            </div>
+
+        <div id="children61603876-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus61603877-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603877-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+11">Module 11</a>
+        </span>            </div>
+
+        <div id="children61603877-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603880-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+12">Module 12</a>
+        </span>            </div>
+
+        <div id="children61603880-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                        </ul>
+                                        </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603901-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Environment">Environment</a>
+        </span>            </div>
+
+        <div id="children61603901-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603909-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Metrics">Metrics</a>
+        </span>            </div>
+
+        <div id="children61603909-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus61603886-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603886-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Tasks">Tasks</a>
+        </span>            </div>
+
+        <div id="children61603886-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan61603882-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Tests+schedule">Tests schedule</a>
+        </span>            </div>
+
+        <div id="children61603882-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+    </ul>
+</div>
+    </ul>
+
+    <fieldset class="hidden">
+        <input name="treeId" value="" type="hidden">
+        <input name="treeRequestId" value="/conf2/plugins/pagetree/naturalchildren.action?decorator=none&amp;excerpt=false&amp;sort=position&amp;reverse=false&amp;disableLinks=false" type="hidden">
+        <input name="treePageId" value="61603872" type="hidden">
+
+        <input name="noRoot" value="false" type="hidden">
+        <input name="rootPageId" value="61603843" type="hidden">
+
+        <input name="rootPage" value="" type="hidden">
+        <input name="startDepth" value="0" type="hidden">
+        <input name="spaceKey" value="JTK" type="hidden">
+
+        <input name="i18n-pagetree.loading" value="Loading..." type="hidden">
+        <input name="i18n-pagetree.error.permission" value="Unable to load page tree. It seems that you do not have permission to view the root page." type="hidden">
+        <input name="i18n-pagetree.eeror.general" value="There was a problem retrieving the page tree. Please check the server log file for more information." type="hidden">
+        <input name="loginUrl" value="/conf2/login.action?os_destination=%2Fdisplay%2FJTK%2FModule%2B09" type="hidden">
+
+                <fieldset class="hidden">
+                                                <input name="ancestorId" value="61603844" type="hidden">
+                                    <input name="ancestorId" value="61603843" type="hidden">
+                                    </fieldset>
+    </fieldset>
+</div>
+
+
+
+            </div><div unselectable="on" class="vsplitbar" style="z-index: 4; position: absolute; -moz-user-select: none; cursor: ew-resize; left: 221px; height: 597px;"><a title="vsplitbar" tabindex="0" accesskey="L" href="javascript:void(0)"></a></div>
+    <div style="position: absolute; left: 226px; width: 1118px; height: 597px;" id="splitter-content">
+
+                    <script type="text/javascript" src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/doc-theme.js"></script>
+    
+                        
+            
+<div id="main">
+    <div id="main-header">
+        
+        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                <li class="ajs-button normal">
+    
+        
+    
+    <a id="shareContentLink" href="http://jtrain.ddns.net:9001/conf2" class="share" title="Share this content by emailing other users ( Type 's' )">
+                   <span><u>S</u>hare</span></a>        </li>
+                    
+                        
+            <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action trigger ajs-menu-title" href="#"><span><span>Tools</span></span></a>         <div class="ajs-drop-down most-right-menu-item assistive" hidden="">
+                        <ul id="action-menu-link-marker" class="section-marker first">
+                                        <li>
+    
+        
+    
+    <a id="page-favourite" href="http://jtrain.ddns.net:9001/conf2/labels/addfavourite.action?entityId=61603872&amp;atl_token=ee5a10bbd547ac059da378b3efaa10ab6bc18138" class="action-page-favourite" title="">
+                   <span>Favourite</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="page-watch" href="http://jtrain.ddns.net:9001/conf2/pages/addpagenotification.action?pageId=61603872&amp;atl_token=ee5a10bbd547ac059da378b3efaa10ab6bc18138" class="action-page-watching" title="">
+                   <span>Watch</span></a>        </li>
+                                        <li class="assistive">
+    
+        
+    
+    <a id="page-unwatch" href="http://jtrain.ddns.net:9001/conf2/pages/removepagenotification.action?pageId=61603872&amp;atl_token=ee5a10bbd547ac059da378b3efaa10ab6bc18138" class="action-page-watching selected ie-page-watching-selected inactive" title="">
+                   <span>Stop Watching</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+        
+        <h1 id="title-heading" class="pagetitle">
+                            <a href="http://jtrain.ddns.net:9001/conf2/display/JTK"><img class="logo global" src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/confluence_48_trans.png" alt=""></a>                
+            <span id="title-text">
+                                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+09">Module 09</a>
+                            </span>
+        </h1>
+    </div>
+
+    
+
+    
+    
+    
+    
+    
+
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                      
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+
+<div id="content" class="page view">
+    
+
+<div id="action-messages">
+                        </div>
+
+
+
+    
+<script type="text/x-template" title="movePageDialog">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Specify the new parent page for this page and its children by space and title.
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <fieldset>
+                
+
+    <legend class="assistive"><span>Change the Parent Page to a Known Page</span></legend>
+            <div class="row">
+                <label for="new-space">New space:</label>
+                <div class="value new-space-value">
+                    <input id="new-space-key" name="new-space-key" type="hidden" value="JTK">
+                                            <span class="space-input">
+                            <input id="new-space" name="new-space" value="Java Training K 2015 Autumn" disabled="disabled">
+                        </span>
+                        <span class="description warning">You cannot move this page to another space because you do not have permission to remove it from this space.</span>
+                                        <div class="new-space-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+            <div class="row">
+                <label for="new-parent-page">New parent page:</label>
+                <div class="value new-parent-page-value">
+                    <span class="page-input">
+                        <input id="new-parent-page" name="new-parent-page" value="Classes">
+                    </span>
+                    <span class="description">Start typing a page title to see a list of suggestions.</span>
+                    <div class="new-parent-page-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="location-info">
+        <div class="row">
+            <label>Current location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="current-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <label>New location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="new-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" title="movePageSearchPanel">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Search for and select the new parent page for this page and its children.
+            </div>
+        </div>
+    </div>
+    <div id="move-page-search-container" class="row">
+        <div class="search-form">
+            <fieldset>
+                    
+
+    <legend class="assistive"><span>Search for a New Parent Page</span></legend>
+                    
+
+    <label  for="move-page-search-query" class="assistive">Search keywords</label>
+                <input class="search-query" id="move-page-search-query">
+                    
+
+    <label  for="move-page-search-space" class="assistive">Search in space</label>
+                                    <select id="move-page-search-space" class="search-space" disabled="disabled">
+                        <option value="JTK" selected="selected">Java Training K 2015 Autumn</option>
+                    </select>
+                                <input type="button" value="Search">
+                                    <div class="description warning">You cannot move this page to another space because you do not have permission to remove it from this space.</div>
+                            </fieldset>
+        </div>
+        <div class="search-results">
+        </div>
+    </div>
+</script>
+<script type="text/x-template" title="searchResultsGrid">
+    <table>
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <th class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></th>
+        <td class="search-result-space"><a class="space" href="/conf2/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script><!-- Start restrictions section -->
+<script type="text/x-template" title="page-permissions-div">
+<div id="page-permissions-div">
+    <div id="page-permissions-editor-form">
+
+                <div id="page-permissions-error-div" class="hidden">
+            <a href="#" id="permissions-error-div-close">Ok</a>
+            <div></div>
+        </div>
+
+                <div id="page-permissions-type-radios" class="page-permissions-label-rows">
+            <div>
+                <input id="restrictViewRadio" type="radio" checked="checked" name="pagePermissionTypeRadio" value="view"/>
+                <label for="restrictViewRadio">Restrict viewing of this page</label>
+                <input id="restrictEditRadio" type="radio" name="pagePermissionTypeRadio" value="edit"/>
+                <label for="restrictEditRadio">Restrict editing of this page</label>
+            </div>
+        </div>
+        <div id="page-permissions-input" class="page-permissions-label-rows">
+            <div class="page-permissions-label">To:</div>
+            <div id="page-permissions-chooser-box">
+                                    <span id="page-permissions-choose-me" class="ajs-button normal">
+                        <img class="permission-entity-picture" src="/conf2/images/icons/profilepics/default.gif" border="0" alt="Me" align="absmiddle"/>
+                        <a href="#">Me</a>
+                        <span class="remote-user-name hidden">engsyst</span>
+                    </span>
+                                <span id="page-permissions-choose-user" class="ajs-button">
+                    
+
+
+
+    
+
+
+
+<a href="#" id='userpicker-popup-link-image' onClick="var picker = window.open('/conf2/spaces/openuserpicker.action?key=JTK&amp;startIndex=0&amp;onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;"><img src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_/images/icons/user_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose users" /></a>
+<a href="#" id='userpicker-popup-link-text' onClick="var picker = window.open('/conf2/spaces/openuserpicker.action?key=JTK&amp;startIndex=0&amp;onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;">Person...</a>
+
+
+                </span>
+                <span id="page-permissions-choose-group" class="ajs-button">
+                    
+
+
+
+    
+
+ 
+
+<a href="#" id='grouppicker-popup-link-image' onClick="var picker = window.open('/conf2/spaces/opengrouppicker.action?key=JTK&amp;startIndex=0&amp;actionName=dosearchgroups.action&amp;onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;"><img src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_/images/icons/group_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose groups" /></a>
+<a href="#" id='grouppicker-popup-link-text' onClick="var picker = window.open('/conf2/spaces/opengrouppicker.action?key=JTK&amp;startIndex=0&amp;actionName=dosearchgroups.action&amp;onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;">Group...</a>
+
+
+                </span>
+            </div>
+            <div id="page-permissions-input-box">
+                <input type="text" id="page-permissions-names-input" name="permissionNames"
+                    placeholder="Enter user or group name" class="autocomplete-user"
+                    data-max="10" data-none-message="No matches"
+                    data-target="#page-permissions-names-hidden" data-template="{username}"
+                    data-dropdown-target="#page-perms-name-dropdown-wrapper" data-resize-to-input="true"
+                    size="30"/>
+                <input
+    type="hidden"
+                            id="page-permissions-names-hidden"           />                <img height="16px" width="1px" src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_/images/border/spacer.gif"/>
+                <input type="button" id="add-typed-names" value="Restrict">
+                <div id="page-perms-name-dropdown-wrapper" class="aui-dd-parent autocomplete"></div>
+            </div>
+        </div>
+    </div>
+    <div id="page-permissions-tables">
+        <div id="page-permissions-table-div">
+                        <table id="page-permissions-table" class="page-permissions-table">
+                <tr id="page-permissions-no-views" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No view restrictions are defined for this page</span></td>
+                </tr>
+                <tr id="page-permissions-no-edits" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No edit restrictions are defined for this page</span></td>
+                </tr>
+            </table>
+        </div>
+        <div id="page-inherited-permissions-table-div" class="hidden">
+            <span id="page-inherited-permissions-table-desc">
+                <a class="icon twisty-closed">Show/Hide</a>
+                <a id="toggle-inherited-permissions" title="Click to see inherited restrictions">This page has restricted parent pages. It can only be seen by users who can see those parent pages.</a>
+            </span>
+            <div id="page-inherited-permissions-tables" class="hidden page-inheritance-togglable"></div>
+        </div>
+    </div>
+</div>
+</script>
+
+<!-- End restrictions section -->
+
+        
+    
+    
+        <fieldset class="hidden parameters">
+            <input title="parentPageId" value="61603844" type="hidden">
+        </fieldset>
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">Skip to end of metadata</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+                            <li class="page-metadata-item noprint">
+    
+            
+    
+    <a id="content-metadata-page-restrictions" href="#" class="page-metadata-icon page-restrictions" title="Page restrictions apply. Click the lock icon to view or edit the restriction.">
+                   <span>Page restrictions apply</span></a>        </li>
+                            <li class="page-metadata-item noprint">
+    
+        
+    
+    <a id="content-metadata-attachments" href="http://jtrain.ddns.net:9001/conf2/pages/viewpageattachments.action?pageId=61603872&amp;metadataLink=true" class="page-metadata-icon action-view-attachments" accesskey="a" title="Attachments: 1">
+                   <span><span class="page-metadata-attachments-text">Attachments:</span><span class="page-metadata-attachments-count">1</span></span></a>        </li>
+                        <li class="page-metadata-modification-info">
+                                    Added by <a data-user-hover-bound="true" title="" href="http://jtrain.ddns.net:9001/conf2/display/%7Edkolesnikov" class="url fn confluence-userlink userlink-0" data-username="dkolesnikov">Dmitry Kolesnikov</a>, last edited by <a data-user-hover-bound="true" title="" href="http://jtrain.ddns.net:9001/conf2/display/%7Edkolesnikov" class="url fn confluence-userlink userlink-0" data-username="dkolesnikov">Dmitry Kolesnikov</a> on Nov 05, 2015
+                                                                    </li>
+                    </ul>
+                </div>
+
+
+<a href="#page-metadata-start" class="assistive">Go to start of metadata</a>
+<div id="page-metadata-end" class="assistive"></div>
+        
+        <fieldset class="hidden parameters">
+                        <input title="browsePageTreeMode" value="view" type="hidden">
+        </fieldset>
+
+        <div class="wiki-content">
+                           <p>На странице представлена информация по модулю.</p><hr><h3 id="Module09-Материалпомодулю">Материал по модулю</h3><p>Конспект и раздаточный материал:</p><p><a href="http://jtrain.ddns.net:9001/conf2/download/attachments/61603872/Java.SE.06.Generic+and+collections_conspect.docx?version=1&amp;modificationDate=1446751623000">Java.SE.06.Generic and collections_conspect.docx</a></p><h3 id="Module09-Лекция№11">Лекция №11</h3><p>1) Сравнение объектов. Интерфейсы Comparable, Comparator. Методы hashCode, equals, compare/compareTo, их контракты.</p><p>2) Коллекции. Иерархия. Iterable/Iterator, Collection/List/Set/Queue. Классы из ядра (ArrayList/Vector/Stack, HashSet).</p><div class="panelMacro"><table class="infoMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/information.png" alt="" align="absmiddle" border="0" height="16" width="16"></td><td><b>Домашнее задание</b><br><p>По книге Java. Промышленное программирование:<br>ознакомиться с материалом по теме лекции</p><p>Прочесть и усвоить материал по следующим ссылкам:<br><a href="http://skipy.ru/technics/objCompTh.html" class="external-link" rel="nofollow">http://skipy.ru/technics/objCompTh.html</a><br><a href="http://skipy.ru/technics/objCompPr.html" class="external-link" rel="nofollow">http://skipy.ru/technics/objCompPr.html</a></p></td></tr></tbody></table></div><h3 id="Module09-Лекция№12">Лекция №12</h3><p>1) Коллекции. Классы из ядра (LinkedList). Collections/Arrays.</p><p>2) Ассоциативные контейнеры. Иерархия. Классы из ядра. Hash/Tree контейнеры (HashMap/Hashtable/Properties, TreeMap). Map.Entry.</p><p>Материалы лекции:&nbsp;</p><div class="panelMacro"><table class="infoMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="Module%2009%20-%20Java%20Training%20K%202015%20Autumn%20-%20Java%20Training_files/information.png" alt="" align="absmiddle" border="0" height="16" width="16"></td><td><b>Домашнее задание</b><br><p>По книге Java. Промышленное программирование:<br>ознакомиться с материалом по теме лекции</p></td></tr></tbody></table></div><h3 id="Module09-Примеры">Примеры</h3><p>Находятся в репозитории: examples/M09 (отсутствуют).</p>
+    
+        </div>
+
+        <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+         <rdf:Description
+    rdf:about="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+09"
+    dc:identifier="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+09"
+    dc:title="Module 09"
+    trackback:ping="http://jtrain.ddns.net:9001/conf2/rpc/trackback/61603872"/>
+</rdf:RDF>
+-->
+
+        <script type="text/x-template" title="labels-dialog-div">
+        <div id="labels-dialog">
+        <div class="labels-editor">
+            <form method="GET" action="" id="add-labels-form">
+                <div id="labelOperationErrorContainer">
+                    <span class="error"><span class="errorMessage" id="labelOperationErrorMessage"></span></span>
+                </div>
+    
+                <div id="label-input-fields">
+                    <input autocomplete="off" id="labelsString" name="labelsString" value="">
+                    <input id="add-labels-editor-button" type="submit" class="add-labels" value="Add">
+                </div>
+                <div id="labelsAutocompleteList" class="aui-dd-parent resize-to-input" style="width: 417px"></div>
+                <div id="dialog-label-list">
+                    <!-- DIV placeholder for labels list, is copied into in labels-dialog.js -->
+                </div>
+                <div id="waitImageAndStatus">
+                    <img class="waiting" alt="Please wait" src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_/images/icons/wait.gif">&nbsp;
+                    <span id="labelOperationStatus" class="smalltext"></span>
+                </div>
+                <div class="labels-tip"></div>
+            </form>
+        </div>
+        <div style="display: none;">
+            <div class="labels-section-content content-column"
+    	    		entityid="61603872" entitytype="Page"
+    		>
+	<div class="labels-content">
+		
+
+<ul class="label-list">
+    <li class="no-labels-message-container">
+        <span id="labels-section-title-none" class="no-labels-message">
+            None
+        </span>
+    </li>
+                <li class="labels-edit-container"><a href="#" class="show-labels-editor editor-icon" title="Edit Labels">
+            <span class="icon icon-edit">Edit Labels</span>
+        </a></li>
+    </ul>
+    </div>
+</div>        </div>
+    </div>
+</script>
+            
+    
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-editor">
+        <span id="labels-section-title" class="label-title">Labels</span>
+        <div class="labels-section-content content-column" entityid="61603872" entitytype="Page">
+	<div class="labels-content">
+		
+
+<ul class="label-list">
+    <li class="no-labels-message-container">
+        <span id="labels-section-title-none" class="no-labels-message">
+            None
+        </span>
+    </li>
+                <li class="labels-edit-container"><a href="#" class="show-labels-editor editor-icon" title="Edit Labels ( Type 'l' )">
+            <span class="icon icon-edit">Edit Labels</span>
+        </a></li>
+    </ul>
+    </div>
+</div>    </div>
+</div>
+
+                    <div id="children-section" class="pageSection children-showing group">
+                
+        <div class="section-header ">
+            <h2 id="children-section-title" class="section-title">
+                <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+09?showChildren=false#children" class="children-show-hide">
+                                            1 Child Page
+                                    </a>
+            </h2>
+
+            <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Module+09?showChildren=false#children" class="children-show-hide icon"></a>
+            <!--
+            <span class="noprint grey">
+                <a class="children-subtitle" href="/conf2/pages/listpages-dirview.action?key=JTK&amp;openId=61603872#selectedPageInHierarchy">Reorder Pages</a>
+                            </span>
+            -->
+        </div>
+        <div id="page-children" class="pageSectionBody children-loaded">
+                                        <span class="child-display">
+                                 <span class="icon icon-page" title="Page">Page:</span>                 <a href="http://jtrain.ddns.net:9001/conf2/display/JTK/Practice6">Practice6</a>
+                         </span>
+                                </div>
+        </div>
+    
+            
+
+
+
+
+            
+    
+
+
+
+
+
+
+
+
+                    
+    
+<div id="comments-section" class="pageSection group">
+    
+    
+    
+    
+            <div class="bottom-comment-panels comment-panels">
+                
+            </div>
+    
+    </div>
+
+
+            
+</div>
+
+
+    
+
+
+
+    
+    
+
+    
+    
+    
+
+
+            
+    
+
+
+    <br class="clear">
+</div>
+  
+    </div>
+</div>
+
+
+        
+            
+    </div>
+
+
+<div style="display: none;" id="content-hover-0" class="ajs-content-hover"><div style="width: 300px;" class="contents"></div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div style="display: none;" id="content-hover-shadow"><div class="tl"></div><div class="tr"></div><div class="l"></div><div class="r"></div><div class="bl"></div><div class="br"></div><div class="b"></div></div><div style="position: relative; z-index: 0;" id="fileuploadShim"></div><div class="plupload html5" style="position: absolute; background: transparent none repeat scroll 0% 0%; width: 1329px; height: 0px; overflow: hidden; z-index: -1; opacity: 0; top: 635px; left: 0px;" id="p1ah1n4qc11imv1nfr1tp11guk1n6d0_html5_container"><input id="p1ah1n4qc11imv1nfr1tp11guk1n6d0_html5" style="font-size: 999px; position: absolute; width: 100%; height: 100%;" accept="" multiple="multiple" type="file"></div></body></html>

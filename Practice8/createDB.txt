@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS groups;
+USE groups
+CREATE TABLE IF NOT EXISTS users
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    login VARCHAR(32) NOT NULL
+);
+CREATE UNIQUE INDEX users_id_uindex ON users (id);
+CREATE TABLE IF NOT EXISTS groups
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(32) NOT NULL
+);
+CREATE UNIQUE INDEX groups_id_uindex ON groups (id);
+CREATE TABLE IF NOT EXISTS users_groups
+(
+    user_id INT,
+    group_id INT,
+    CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES users (id) ON UPDATE CASCADE,
+    CONSTRAINT group_id FOREIGN KEY (group_id) REFERENCES groups (id) ON UPDATE CASCADE
+);

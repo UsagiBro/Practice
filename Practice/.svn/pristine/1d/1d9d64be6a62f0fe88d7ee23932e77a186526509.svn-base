@@ -1,0 +1,10 @@
+package ua.nure.zhazhkyi.Practice1;
+
+/**
+ * Created by Igor Zhazhky on 27.06.2017.
+ */
+public class Part1 {
+    public static void main(String[] args){
+        System.out.println("Hello, World");
+    }
+}

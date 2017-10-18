@@ -1,0 +1,30 @@
+package ua.nure.zhazhkyi.Practice5;
+
+import java.util.Scanner;
+
+public class Spam {
+    static long[] intervals = {500, 800, 1000, 1200, 1500};
+    static String[] messages = {"0.5", "1", "2", "3", "4"};
+
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start();
+        Scanner sc = new Scanner(System.in);
+        sc.nextLine();
+        t1.interrupt();
+
+    }
+
+    static class MyThread extends Thread{
+        public void run() {
+            for (int i = 0; i < intervals.length; i++) {
+                System.out.println(messages[i]);
+                try {
+                    Thread.sleep(intervals[i]);
+                } catch (InterruptedException e) {
+                    return;
+                }
+            }
+        }
+    }
+}
